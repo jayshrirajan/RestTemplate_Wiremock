@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="708b6ffb-ae57-45bb-a451-9472b67586dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/RestTemplate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/controller/RestTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/controller/RestTemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/model/VendItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/model/VendItemRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/swagger/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ZNvz3vegAOI78TA1xLKjpAE8tm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/jayasri.rajan/Downloads/vmGradle",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jayasri.rajan\Downloads\RestTemplate\RestTemplate\src\main\resources" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="708b6ffb-ae57-45bb-a451-9472b67586dc" name="Changes" comment="" />
+      <created>1702275610612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702275610612</updated>
+    </task>
+    <servers />
+  </component>
+</project>
