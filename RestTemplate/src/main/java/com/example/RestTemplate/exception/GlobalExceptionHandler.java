@@ -18,7 +18,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ItemOutOfStockException.class)
     public ResponseEntity<Error> handleItemOutOfStockException(ItemOutOfStockException ex) {
         Error errorResponse = new Error(ex.getMessage());
-        return new ResponseEntity<>(errorResponse, NOT_FOUND);
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(InsufficientBalanceException.class)

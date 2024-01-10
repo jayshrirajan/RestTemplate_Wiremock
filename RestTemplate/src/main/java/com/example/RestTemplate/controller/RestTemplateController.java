@@ -21,7 +21,7 @@ import java.util.Map;
 public class RestTemplateController {
 
     @Autowired
-    RestTemplate restTemplate;
+   public  RestTemplate restTemplate;
 
     static final String VM_URL = "http://localhost:8080/vending-machine/";
 
@@ -45,9 +45,9 @@ public class RestTemplateController {
     {
 
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
+         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        HttpEntity<String> entity = new HttpEntity<>(headers);
+         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         ResponseEntity<String> responseEntity = restTemplate
                 .exchange(VM_URL +"get-item", HttpMethod.GET, entity, String.class);
@@ -58,8 +58,8 @@ public class RestTemplateController {
     @PostMapping("rest/initialize")
     public String initialize(@RequestBody List<Item> itemList) {
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<List<Item>> entity = new HttpEntity<>(itemList, headers);
+         headers.setContentType(MediaType.APPLICATION_JSON);
+         HttpEntity<List<Item>> entity = new HttpEntity<>(itemList, headers);
 
         ResponseEntity<String> responseEntity = restTemplate
                 .exchange(VM_URL +"initialize", HttpMethod.POST, entity, String.class);
@@ -110,6 +110,7 @@ public class RestTemplateController {
 
 
     }
+
 }
 
 

@@ -2,6 +2,13 @@ package com.example.RestTemplate.model;
 
 public class VendItemRequest {
     private int itemId;
+
+    public VendItemRequest(int itemId, double amount, int quantity) {
+        this.itemId = itemId;
+        this.amount = amount;
+        this.quantity = quantity;
+    }
+
     private double amount;
     private int quantity;
 
