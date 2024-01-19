@@ -23,18 +23,33 @@ public class LoggingInterceptor implements ClientHttpRequestInterceptor {
     traceResponse(response);
     return response;
 }
-  private void traceRequest(HttpRequest request, byte[] body) throws IOException {
-      log.debug("Request URI: {}", request.getURI());
-      log.debug("Request method: {}", request.getMethod());
-      log.debug("Request headers: {}", request.getHeaders());
-      log.debug("Request body: {}", new String(body, StandardCharsets.UTF_8));
+//  private void traceRequest(HttpRequest request, byte[] body) throws IOException {
+//      log.debug("Request URI: {}", request.getURI());
+//      log.debug("Request method: {}", request.getMethod());
+//      log.debug("Request headers: {}", request.getHeaders());
+//      log.debug("Request body: {}", new String(body, StandardCharsets.UTF_8));
+//
+//}
+//
+//    private void traceResponse(ClientHttpResponse response) throws IOException {
+//        log.debug("Response status code: {}", response.getStatusCode());
+//        log.debug("Response headers: {}", response.getHeaders());
+//        log.debug("Response body: {}", StreamUtils.copyToString(response.getBody(), StandardCharsets.UTF_8));
+//
+//    }
+    // we can info also instead of debug
+    private void traceRequest(HttpRequest request, byte[] body) throws IOException {
+        log.info("Request URI: {}", request.getURI());
+        log.info("Request method: {}", request.getMethod());
+        log.info("Request headers: {}", request.getHeaders());
+        log.info("Request body: {}", new String(body, StandardCharsets.UTF_8));
 
-}
+    }
 
     private void traceResponse(ClientHttpResponse response) throws IOException {
-        log.debug("Response status code: {}", response.getStatusCode());
-        log.debug("Response headers: {}", response.getHeaders());
-        log.debug("Response body: {}", StreamUtils.copyToString(response.getBody(), StandardCharsets.UTF_8));
+        log.info("Response status code: {}", response.getStatusCode());
+        log.info("Response headers: {}", response.getHeaders());
+        log.info("Response body: {}", StreamUtils.copyToString(response.getBody(), StandardCharsets.UTF_8));
 
     }
 

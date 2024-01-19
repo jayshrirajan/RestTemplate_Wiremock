@@ -4,7 +4,7 @@
 server:
   port: 8081
 
-springdoc:
+  springdoc:
   api-docs:
     enabled: true
     path: /vm-docs
@@ -12,15 +12,11 @@ springdoc:
     path: /swagger-ui.html
     enabled: true
 
-#logging
-logging:
-  level:
-    org.springframework.web.client.RestTemplate: DEBUG
-
-# application.yml
-rest-template:
-  connect-timeout: 5000
-  read-timeout: 5000
+#logging the response to enable this
+#logging:
+#  level:
+#    org.springframework.web.client.RestTemplate: DEBUG
+#
 
 
 

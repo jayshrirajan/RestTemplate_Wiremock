@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="708b6ffb-ae57-45bb-a451-9472b67586dc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/controller/RestTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/controller/RestTemplateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/model/VendItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/model/VendItemRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/swagger/SwaggerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/config/LoggingInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/config/LoggingInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/config/RestTemplateConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/test/java/com/example/RestTemplate/intergration/WireMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/test/java/com/example/RestTemplate/intergration/WireMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/RestTemplateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/RestTemplateApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/LoggingInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/LoggingInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/RestTemplateConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/test-classes/com/example/RestTemplate/intergration/WireMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/test-classes/com/example/RestTemplate/intergration/WireMock.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +49,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/jayasri.rajan/Downloads/vmGradle",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/jayasri.rajan/Downloads/WireMockAndSpockTest",
     "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.tomakehurst.wiremock.client" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jayasri.rajan\Downloads\RestTemplate\RestTemplate\src\main\resources" />
     </key>

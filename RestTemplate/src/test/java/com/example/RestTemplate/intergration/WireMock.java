@@ -6,33 +6,21 @@ package com.example.RestTemplate.intergration;
 import com.example.RestTemplate.model.Item;
 import com.example.RestTemplate.model.VendItemRequest;
 import com.github.tomakehurst.wiremock.WireMockServer;
-import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.*;
-import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
-
 import java.util.*;
-
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
-import static javax.management.Query.eq;
-import static org.apache.http.params.CoreConnectionPNames.CONNECTION_TIMEOUT;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.when;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -146,12 +134,13 @@ public class WireMock {
                         .withBody("{\"status\": \"success\"}")));
 
         List<VendItemRequest> vendItemRequests = new ArrayList<>();
-        vendItemRequests.add(new VendItemRequest(1,1.0,1));
+        vendItemRequests.add(new VendItemRequest(1, 1.0, 1));
         HttpEntity<List<VendItemRequest>> entity = new HttpEntity<>(vendItemRequests, new HttpHeaders());
         ResponseEntity<String> responseEntity = this.restTemplate.exchange(VM_URL + "vend-items", HttpMethod.PUT, entity, String.class);
 
         assertEquals("{\"status\": \"success\"}", responseEntity.getBody());
     }
+
     @Test
     public void testInsufficientBalance() {
         // Set up WireMock stub for error response
@@ -174,8 +163,7 @@ public class WireMock {
         } catch (HttpClientErrorException.BadRequest e) {
             assertEquals(HttpStatus.BAD_REQUEST, e.getStatusCode());
             assertEquals("{\"error\": \"Insufficient balance\"}", e.getResponseBodyAsString());
-        }
-        catch (ResourceAccessException e) {
+        } catch (ResourceAccessException e) {
             System.out.println("ResourceAccessException: " + e.getMessage());
 
         }
@@ -203,16 +191,14 @@ public class WireMock {
         } catch (HttpClientErrorException.NotFound e) {
             assertEquals(HttpStatus.NOT_FOUND, e.getStatusCode());
             assertEquals("{\"error\": \"" + errorMessage + "\"}", e.getResponseBodyAsString());
-        }
-        catch (ResourceAccessException e) {
+        } catch (ResourceAccessException e) {
             System.out.println("ResourceAccessException: " + e.getMessage());
         }
     }
-
-
-
-
 }
+
+
+
 
 
 
