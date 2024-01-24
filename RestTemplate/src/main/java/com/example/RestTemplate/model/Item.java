@@ -19,6 +19,9 @@ public class Item {
                 ", itemCost=" + itemCost +
                 '}';
     }
+    public Item(){
+
+    }
 
     public Item(int idItem, String itemCode, String itemName, int quantity, double itemCost) {
         this.idItem = idItem;

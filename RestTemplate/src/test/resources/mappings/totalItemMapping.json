@@ -1,0 +1,16 @@
+
+
+{
+  "request": {
+    "method": "GET",
+    "url": "/rest/totalItem"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "response/totalItemResponse.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
+

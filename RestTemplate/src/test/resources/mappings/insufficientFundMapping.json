@@ -1,0 +1,31 @@
+
+{
+  "request": {
+    "method": "PUT",
+    "urlPattern": "/rest/vend-items",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.[0].itemId",
+        "equalToJson": "1"
+      },
+      {
+        "matchesJsonPath": "$.[0].amount",
+        "equalToJson": "0.5"
+      },
+      {
+        "matchesJsonPath": "$.[0].quantity",
+        "equalToJson": "1"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "response/insufficientFundResponse.json"
+  }
+}
+
+
+

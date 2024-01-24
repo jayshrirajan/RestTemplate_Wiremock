@@ -7,15 +7,9 @@
     <list default="true" id="708b6ffb-ae57-45bb-a451-9472b67586dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/config/LoggingInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/config/LoggingInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/config/RestTemplateConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/model/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/src/test/java/com/example/RestTemplate/intergration/WireMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/test/java/com/example/RestTemplate/intergration/WireMock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/RestTemplateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/RestTemplateApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/LoggingInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/LoggingInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/RestTemplateConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/target/test-classes/com/example/RestTemplate/intergration/WireMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/test-classes/com/example/RestTemplate/intergration/WireMock.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +43,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/jayasri.rajan/Downloads/WireMockAndSpockTest",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/jayasri.rajan/Downloads/RestTemplateLogger",
     "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
 }]]></component>
@@ -60,6 +54,11 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jayasri.rajan\Downloads\RestTemplate\RestTemplate\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jayasri.rajan\Downloads\RestTemplate\RestTemplate\src\test\resources\__files\response" />
+      <recent name="C:\Users\jayasri.rajan\Downloads\RestTemplate\RestTemplate\src\test\resources\__files" />
+      <recent name="C:\Users\jayasri.rajan\Downloads\RestTemplate\RestTemplate\src\test\resources\wiremock\mappings" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

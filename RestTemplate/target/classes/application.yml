@@ -12,11 +12,11 @@ server:
     path: /swagger-ui.html
     enabled: true
 
-#logging
-logging:
-  level:
-    org.springframework.web.client.RestTemplate: DEBUG
-
+#logging the response to enable this
+#logging:
+#  level:
+#    org.springframework.web.client.RestTemplate: DEBUG
+#
 
 
 

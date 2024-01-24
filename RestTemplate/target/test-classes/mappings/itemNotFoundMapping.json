@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "PUT",
+    "urlPattern": "/rest/vend-items",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.[0].itemId",
+        "equalToJson": "11"
+      },
+      {
+        "matchesJsonPath": "$.[0].amount",
+        "equalToJson": "1.0"
+      },
+      {
+        "matchesJsonPath": "$.[0].quantity",
+        "equalToJson": "1"
+      }
+    ]
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "response/itemNotFoundResponse.json"
+  }
+}
