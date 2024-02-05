@@ -26,18 +26,18 @@ public class RestTemplateApplication {
 
 	@Bean
 	public RestTemplate restTemplate(){
-		RestTemplate restTemplate = new RestTemplate();
+		//RestTemplate restTemplate = new RestTemplate();
 		// Add the LoggingInterceptor to the RestTemplate
-		List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
-		interceptors.add(new LoggingInterceptor());
-		restTemplate.setInterceptors(interceptors);
+//		List<ClientHttpRequestInterceptor> interceptors = new ArrayList<>();
+//		interceptors.add(new LoggingInterceptor());
+//		restTemplate.setInterceptors(interceptors);
 //
 //		// Use the RestTemplate as usual
 //		String url = "http://localhost:8080/vending-machine/total-items";
 //		String responseBody = restTemplate.getForObject(url,String.class);
 //		System.out.println("Response from server: " + responseBody);
 
-		return restTemplate;
+		return new RestTemplate();
 	}
 
 

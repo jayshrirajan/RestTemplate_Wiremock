@@ -14,9 +14,9 @@ server:
     enabled: true
 
 #logging the response to enable this
-#logging:
-#  level:
-#    org.springframework.web.client.RestTemplate: DEBUG
+logging:
+  level:
+    org.springframework.web.client.RestTemplate: DEBUG
 
 
 

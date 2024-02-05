@@ -14,6 +14,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -21,24 +22,21 @@ import java.util.Map;
 public class RestTemplateController {
 
     @Autowired
-   public  RestTemplate restTemplate;
+    public RestTemplate restTemplate;
 
     static final String VM_URL = "http://localhost:8080/vending-machine/";
 
     @GetMapping("rest/totalItem")
-    public String getTotalItems()
-    {
+    public String getTotalItems() {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        ResponseEntity<String> responseEntity = restTemplate
-                .exchange(  VM_URL+"total-items", HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "total-items", HttpMethod.GET, entity, String.class);
         return responseEntity.getBody();
     }
-
 
     @GetMapping("rest/getItem")
     public String getItem()
@@ -47,10 +45,10 @@ public class RestTemplateController {
         HttpHeaders headers = new HttpHeaders();
          headers.setContentType(MediaType.APPLICATION_JSON);
 
-         HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        ResponseEntity<String> responseEntity = restTemplate
-                .exchange(VM_URL +"get-item", HttpMethod.GET, entity, String.class);
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL +"get-item", HttpMethod.GET, entity, String.class);
         return responseEntity.getBody();
     }
 

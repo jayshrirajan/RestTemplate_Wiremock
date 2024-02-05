@@ -6,21 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="708b6ffb-ae57-45bb-a451-9472b67586dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/RestTemplateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/src/test/java/com/example/RestTemplate/intergration/WireMock.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/RestTemplateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/RestTemplateApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/LoggingInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/config/LoggingInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/controller/RestTemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/java/com/example/RestTemplate/controller/RestTemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/classpath.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/controller/RestTemplateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/controller/RestTemplateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/Error.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/Error.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/InsufficientBalanceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/InsufficientBalanceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/ItemNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/ItemNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/ItemOutOfStockException.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/ItemOutOfStockException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/UnableToReturnBalanceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/exception/UnableToReturnBalanceException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/model/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/model/VendItemRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/classes/com/example/RestTemplate/model/VendItemRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestTemplate/target/test-classes/com/example/RestTemplate/RestTemplateApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestTemplate/target/test-classes/com/example/RestTemplate/RestTemplateApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestTemplate/target/test-classes/com/example/RestTemplate/intergration/WmTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +41,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/jayasri.rajan/Downloads/RestTemplateLogger",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jayasri.rajan/Downloads/RestTemplate&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.tomakehurst.wiremock.client" />
