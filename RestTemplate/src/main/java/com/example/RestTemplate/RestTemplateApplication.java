@@ -37,7 +37,7 @@ public class RestTemplateApplication {
 //		String responseBody = restTemplate.getForObject(url,String.class);
 //		System.out.println("Response from server: " + responseBody);
 
-		return new RestTemplate();
+		return  restTemplate;
 	}
 
 

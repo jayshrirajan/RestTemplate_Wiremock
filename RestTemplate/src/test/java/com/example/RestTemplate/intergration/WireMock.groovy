@@ -1,13 +1,8 @@
-package com.example.RestTemplate.intergration;
-
-
-
+package com.example.RestTemplate.intergration
 
 import com.example.RestTemplate.model.Item;
 import com.example.RestTemplate.model.VendItemRequest;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.github.tomakehurst.wiremock.WireMockServer;
-import net.minidev.json.JSONObject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,20 +14,14 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.*;
-
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class WireMock {
+ class WireMock {
 
     private RestTemplate restTemplate;
 
@@ -40,19 +29,19 @@ public class WireMock {
     static final String VM_URL = "http://localhost:8081/rest/";
 
     @Before
-    public void setUp() {
+    void setUp() {
         this.restTemplate = new RestTemplate();
         this.wireMockServer = new WireMockServer(options().port(8081));
         this.wireMockServer.start();
     }
 
     @After
-    public void tearDown() {
+    void tearDown() {
         this.wireMockServer.stop();
     }
 
     @Test
-    public void testGetTotalItems() {
+   public void testGetTotalItems() {
         // Set up WireMock stub from JSON mapping file
         wireMockServer.stubFor(get(urlEqualTo("/rest/totalItem"))
                 .willReturn(aResponse()
@@ -66,7 +55,7 @@ public class WireMock {
     }
 
     @Test
-    public void testGetItem() {
+   public void testGetItem() {
         wireMockServer.stubFor(get(urlEqualTo("/rest/getItem"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
@@ -194,7 +183,44 @@ public class WireMock {
 
 
 
-//-------------------------- wiremock with rest and response as direct withBody----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //-------------------------- wiremock with rest and response as direct withBody----------------
 
 //    @Test
 //    public void testGetTotalItems() {
@@ -330,39 +356,3 @@ public class WireMock {
 //        }
 //    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
