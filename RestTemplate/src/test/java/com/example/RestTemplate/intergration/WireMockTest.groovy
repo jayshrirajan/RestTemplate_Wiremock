@@ -1,105 +1,111 @@
 package com.example.RestTemplate.intergration
 
-import com.example.RestTemplate.model.Item;
-import com.example.RestTemplate.model.VendItemRequest;
-import com.github.tomakehurst.wiremock.WireMockServer;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.*;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.ResourceAccessException;
-import org.springframework.web.client.RestTemplate;
+import com.example.RestTemplate.model.Item
+import com.example.RestTemplate.model.VendItemRequest
+import com.github.tomakehurst.wiremock.WireMockServer
+import static com.github.tomakehurst.wiremock.client.WireMock.*
 
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
-import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
-import static org.junit.Assert.assertEquals;
+import org.junit.After
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.http.HttpEntity
+import org.springframework.http.HttpHeaders
+import org.springframework.http.HttpMethod
+import org.springframework.http.HttpStatus
+import org.springframework.http.MediaType
+import org.springframework.http.ResponseEntity
+import org.springframework.test.context.junit4.SpringRunner
+import org.springframework.web.client.HttpClientErrorException
+import org.springframework.web.client.ResourceAccessException
+import org.springframework.web.client.RestTemplate
+
+import static com.github.tomakehurst.wiremock.client.WireMock.aResponse
+import static com.github.tomakehurst.wiremock.client.WireMock.get
+import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo
+import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options
+import static org.junit.Assert.assertEquals
 
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
- class WireMock {
-
-    private RestTemplate restTemplate;
+class WireMockTest {
+    private RestTemplate restTemplate
 
     private WireMockServer wireMockServer;
-    static final String VM_URL = "http://localhost:8081/rest/";
+    static final String VM_URL = "http://localhost:8081/rest/"
 
     @Before
     void setUp() {
-        this.restTemplate = new RestTemplate();
-        this.wireMockServer = new WireMockServer(options().port(8081));
-        this.wireMockServer.start();
+        this.restTemplate = new RestTemplate()
+        this.wireMockServer = new WireMockServer(options().port(8081))
+        this.wireMockServer.start()
     }
 
     @After
     void tearDown() {
-        this.wireMockServer.stop();
+        this.wireMockServer.stop()
     }
 
     @Test
-   public void testGetTotalItems() {
+    void testGetTotalItems() {
         // Set up WireMock stub from JSON mapping file
         wireMockServer.stubFor(get(urlEqualTo("/rest/totalItem"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                        .withBodyFile("response/totalItemResponse.json")));
+                        .withBodyFile("response/totalItemResponse.json")))
 
-        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "totalItem", HttpMethod.GET, null, String.class);
+        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "totalItem", HttpMethod.GET, null, String.class)
 
-        assertEquals("{\"totalItem\": 4}", responseEntity.getBody().trim());
+        assertEquals("{\"totalItem\": 4}", responseEntity.getBody().trim())
 
     }
 
     @Test
-   public void testGetItem() {
+    void testGetItem() {
         wireMockServer.stubFor(get(urlEqualTo("/rest/getItem"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                        .withBodyFile("response/getItemResponse.json")));
+                        .withBodyFile("response/getItemResponse.json")))
 
-        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "getItem", HttpMethod.GET, null, String.class);
+        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "getItem", HttpMethod.GET, null, String.class)
 
-        assertEquals("{\"itemName\": \"Soda\"}", responseEntity.getBody().trim());
+        assertEquals("{\"itemName\": \"Soda\"}", responseEntity.getBody().trim())
     }
 
     @Test
-    public void testInitialize() {
+    void testInitialize() {
         wireMockServer.stubFor(post(urlEqualTo("/rest/initialize"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                        .withBodyFile("response/initializeResponse.json")));
+                        .withBodyFile("response/initializeResponse.json")))
 
-        List<Item> itemList = new ArrayList<>();
-        itemList.add(new Item(1, "A", "Soda", 1, 1.0));
-        HttpEntity<List<Item>> entity = new HttpEntity<>(itemList, new HttpHeaders());
-        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "initialize", HttpMethod.POST, entity, String.class);
+        List<Item> itemList = new ArrayList<>()
+        itemList.add(new Item(1, "A", "Soda", 1, 1.0))
+        HttpEntity<List<Item>> entity = new HttpEntity<>(itemList, new HttpHeaders())
+        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "initialize", HttpMethod.POST, entity, String.class)
 
-        assertEquals("[{\"idItem\":1,\"itemCode\":\"A\",\"itemName\":\"Soda\",\"quantity\":1,\"itemCost\":1.0}]", responseEntity.getBody().trim());
+        assertEquals("[{\"idItem\":1,\"itemCode\":\"A\",\"itemName\":\"Soda\",\"quantity\":1,\"itemCost\":1.0}]", responseEntity.getBody().trim())
 
     }
-
     @Test
-    public void testAddChange() {
+    void testAddChange() {
         wireMockServer.stubFor(post(urlEqualTo("/rest/add-change"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                        .withBodyFile("response/addChangeResponse.json")));
+                        .withBodyFile("response/addChangeResponse.json")))
 
-        Map<Double, Integer> denominations = new HashMap<>();
-        denominations.put(1.0, 1);
-        denominations.put(2.0, 1);
-        HttpEntity<Map<Double, Integer>> entity = new HttpEntity<>(denominations, new HttpHeaders());
-        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "add-change", HttpMethod.POST, entity, String.class);
+        Map<Double, Integer> denominations = new HashMap<>()
+        denominations.put(1.0, 1)
+        denominations.put(2.0, 1)
+        HttpEntity<Map<Double, Integer>> entity = new HttpEntity<>(denominations, new HttpHeaders())
+        ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "add-change", HttpMethod.POST, entity, String.class)
 
-        assertEquals( "{\"message\":\"Change added successfully!!\\nCurrent total change : 3.0\"}" ,responseEntity.getBody().trim());
+        assertEquals("{\"message\":\"Change added successfully!!\\nCurrent total change : 3.0\"}", responseEntity.getBody().trim())
     }
-
     @Test
-    public void testVendItem() {
+  void testVendItem() {
         wireMockServer.stubFor(put(urlEqualTo("/rest/vend-items"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
@@ -110,14 +116,14 @@ import static org.junit.Assert.assertEquals;
         HttpEntity<List<VendItemRequest>> entity = new HttpEntity<>(vendItemRequests, new HttpHeaders());
         ResponseEntity<String> responseEntity = restTemplate.exchange(VM_URL + "vend-items", HttpMethod.PUT, entity, String.class);
 
-//        System.out.println("actual result:" + responseEntity.getBody());
+//       System.out.println("actual result:" + responseEntity.getBody());
 //        System.out.println("expected result:" + responseEntity.getBody());
 
         assertEquals("{\"message\":\"Enjoy your Soda!!! Your Change: 0.0\"}", responseEntity.getBody().trim());
     }
 
     @Test
-    public void testInsufficientBalance() {
+    void testInsufficientBalance() {
         wireMockServer.stubFor(put(urlEqualTo("/rest/vend-items"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
@@ -140,7 +146,7 @@ import static org.junit.Assert.assertEquals;
     }
 
     @Test
-    public void testItemNotFound() {
+    void testItemNotFound() {
         wireMockServer.stubFor(put(urlEqualTo("/rest/vend-items"))
                 .willReturn(aResponse()
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
@@ -163,6 +169,7 @@ import static org.junit.Assert.assertEquals;
 
     }
 
+}
 
 
 
@@ -220,7 +227,23 @@ import static org.junit.Assert.assertEquals;
 
 
 
-    //-------------------------- wiremock with rest and response as direct withBody----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------- wiremock with rest and response as direct withBody----------------
 
 //    @Test
 //    public void testGetTotalItems() {
@@ -355,4 +378,4 @@ import static org.junit.Assert.assertEquals;
 //            System.out.println("ResourceAccessException: " + e.getMessage());
 //        }
 //    }
-}
+
